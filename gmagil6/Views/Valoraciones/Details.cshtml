@@ -1,0 +1,42 @@
+﻿@model PortalWeb2019.Models.Valoracion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Valoracion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreEntrada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreEntrada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoEntrada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoEntrada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Voto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Voto)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Identificador }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

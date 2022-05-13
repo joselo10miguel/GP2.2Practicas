@@ -1,0 +1,98 @@
+﻿@model PortalWeb2019.Models.EncuentroDeportivo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EncuentroDeportivo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.deporte)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.deporte)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.equipoLocal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.equipoLocal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.equipoVisitante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.equipoVisitante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ciudad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ciudad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lugar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lugar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hora)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precioMin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precioMin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precioMedio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precioMedio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precioMax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precioMax)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.encuentroDeportivoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

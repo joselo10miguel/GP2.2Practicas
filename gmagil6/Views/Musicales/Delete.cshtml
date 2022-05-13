@@ -1,0 +1,120 @@
+﻿@model PortalWeb2019.Models.Musical
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Musical</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tituloMusical)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tituloMusical)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ciudad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ciudad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.localizacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.localizacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.duracionCiudad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.duracionCiudad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaIni)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaIni)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaFin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaFin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hora)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.duracionObra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.duracionObra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precioMin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precioMin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precioMedio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precioMedio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precioMax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precioMax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcionPrecios)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcionPrecios)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,99 @@
+﻿@model IEnumerable<PortalWeb2019.Models.Musical>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tituloMusical)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ciudad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.localizacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.duracionCiudad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaIni)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaFin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.duracionObra)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precioMin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precioMedio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precioMax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcionPrecios)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tituloMusical)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ciudad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.localizacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.duracionCiudad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaIni)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaFin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.duracionObra)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precioMin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precioMedio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precioMax)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcionPrecios)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.musicalId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.musicalId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.musicalId })
+        </td>
+    </tr>
+}
+
+</table>

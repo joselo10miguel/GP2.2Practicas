@@ -1,0 +1,93 @@
+﻿@model IEnumerable<PortalWeb2019.Models.Concierto>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CantanteGrupo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lugar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ciudad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DiasSemana)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RangoFechas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DuracionEstimada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrecioMin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrecioMed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrecioMax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescPrecios)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CantanteGrupo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lugar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ciudad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DiasSemana)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RangoFechas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DuracionEstimada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrecioMin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrecioMed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrecioMax)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescPrecios)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ConciertoId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ConciertoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ConciertoId })
+        </td>
+    </tr>
+}
+
+</table>

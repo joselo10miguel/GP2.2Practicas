@@ -1,0 +1,105 @@
+﻿@model IEnumerable<PortalWeb2019.Models.Experiencia>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoExperiencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lugar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ciudad_Pueblo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AgenciaPatrocinadora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DiasSemana)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RangoFechas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DuracionEstimada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrecioMin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrecioMed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrecioMax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescPrecios)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Excepciones)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoExperiencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lugar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ciudad_Pueblo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AgenciaPatrocinadora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DiasSemana)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RangoFechas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DuracionEstimada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrecioMin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrecioMed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrecioMax)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescPrecios)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Excepciones)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ExperienciaId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ExperienciaId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ExperienciaId })
+        </td>
+    </tr>
+}
+
+</table>

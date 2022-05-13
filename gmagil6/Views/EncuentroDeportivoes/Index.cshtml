@@ -1,0 +1,87 @@
+﻿@model IEnumerable<PortalWeb2019.Models.EncuentroDeportivo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.deporte)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.equipoLocal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.equipoVisitante)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ciudad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lugar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precioMin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precioMedio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precioMax)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.deporte)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.equipoLocal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.equipoVisitante)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ciudad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lugar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precioMin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precioMedio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precioMax)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.encuentroDeportivoId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.encuentroDeportivoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.encuentroDeportivoId })
+        </td>
+    </tr>
+}
+
+</table>
